@@ -7,11 +7,10 @@ public class Libro {
     private int numero_paginas;
     private int calificacion;
     
-    public Libro( String titulo, Autor autor, int numero_paginas, int calificacion ) {
+    public Libro( String titulo, Autor autor, int numero_paginas ) {
         this.titulo = titulo;
         this.autor = autor;
         this.numero_paginas = numero_paginas;
-        this.calificacion = calificacion;
     }
     
     public boolean calificar ( int calificacion ) {

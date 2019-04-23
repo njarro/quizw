@@ -9,7 +9,7 @@ public class ConjuntoLibros {
     }   
     
     public boolean anadirLibro( Libro libro ) {
-        for (int i = 0; i < n_libros; i++) {
+        for (int i = 0; i < 10; i++) {
             if ( libro.equals(this.libro[i]) )
                 break;
             else if (this.libro[i] == null){
@@ -22,13 +22,16 @@ public class ConjuntoLibros {
     
     public boolean eliminarLibroPorAutor ( Autor autor ) {
         boolean libro_eliminado = false;
-        for (int i = 0; i < n_libros; i++) {
-            if ( autor.equals(libro[i].getAutor()) ) {
-               libro[i].setTitulo("");
-               libro[i].setAutor(null);
-               libro[i].setNumero_paginas(0);
-               libro[i].setCalificacion(0);
-               libro_eliminado =  true;
+        for (int i = 0; i < 10; i++) {
+            if ( libro[i] != null ) {
+                if ( autor.equals(libro[i].getAutor()) ) {
+                libro[i].setTitulo("");
+                Autor autor_default = new Autor ( "", "" ); 
+                libro[i].setAutor( autor_default );
+                libro[i].setNumero_paginas(0);
+                libro[i].setCalificacion(0);
+                libro_eliminado =  true;
+                }
             }
         }
         return libro_eliminado;
@@ -36,13 +39,16 @@ public class ConjuntoLibros {
     
     public boolean eliminarLibroPorTitulo ( String titulo ) {
         boolean libro_eliminado = false;
-        for (int i = 0; i < n_libros; i++) {
-            if ( titulo.equals(libro[i].getTitulo()) ) {
-               libro[i].setTitulo("");
-               libro[i].setAutor(null);
-               libro[i].setNumero_paginas(0);
-               libro[i].setCalificacion(0);
-               libro_eliminado =  true;
+        for (int i = 0; i < 10; i++) {
+            if ( libro[i] != null ) {
+                if ( titulo.equals(libro[i].getTitulo()) ) {
+                    libro[i].setTitulo("");
+                Autor autor_default = new Autor ( "", "" ); 
+                libro[i].setAutor( autor_default );
+                libro[i].setNumero_paginas(0);
+                libro[i].setCalificacion(0);
+                libro_eliminado =  true;
+                }
             }
         }
         return libro_eliminado;
@@ -51,7 +57,7 @@ public class ConjuntoLibros {
     public Libro obtenerMejorCalificado () {
         int mejor_calificacion = 0;
         
-        for (int i = 0; i < n_libros; i ++ ){
+        for (int i = 0; i < 10; i ++ ){
             if ( libro[i].getCalificacion() > mejor_calificacion )
                 mejor_calificacion = i;
             
@@ -63,7 +69,7 @@ public class ConjuntoLibros {
     public Libro obtenerPeorCalificado () {
         int peor_calificacion = 10;
         
-        for (int i = 0; i < n_libros; i ++ ){
+        for (int i = 0; i < 10; i ++ ){
             if ( libro[i].getCalificacion() < peor_calificacion )
                 peor_calificacion = i;
             
@@ -72,7 +78,7 @@ public class ConjuntoLibros {
         return libro[ peor_calificacion ];
     }
     
-    public Libro[] listarLibros () {
+    public Libro[] getLibros () {
         return libro;
     }
     
