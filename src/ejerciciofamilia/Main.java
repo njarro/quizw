@@ -52,7 +52,7 @@ public class Main {
                                 System.out.println("Valor erroneo. Ingreselo de nuevo:");
                         } while( sexo != 1 && sexo != 2 );
 
-                        fueAgregado = familias[0].agregarMiembro( nombre, apellido, edad, sexo, rol );
+                        fueAgregado = familias[0].agregarMiembro( nombre, apellido, edad, sexo, rol - 1 );
 
                         if (fueAgregado) 
                             System.out.println( "La persona ha sido agregada exitosamente." );

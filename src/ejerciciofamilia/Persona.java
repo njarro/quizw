@@ -5,10 +5,10 @@ public class Persona {
     private String nombre;
     private String apellido;
     private int edad;
-    private int sexo;
+    private String sexo;
     private String rol;
 
-    public Persona(String nombre, String apellido, int edad, int sexo, String rol) {
+    public Persona(String nombre, String apellido, int edad, String sexo, String rol) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -28,7 +28,7 @@ public class Persona {
         return edad;
     }
 
-    public int getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
