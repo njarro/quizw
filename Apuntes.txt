@@ -1,0 +1,67 @@
+DEPENDENCIA
+----------------> 
+1)Variables objetadas locales
+class A{
+	void xx(){
+		B b = new B();
+	}
+}
+
+2)Reciben parametros del objeto
+class A{
+	void yy(B b){
+		...
+	}
+}
+
+3)Retornan objetos
+class A{
+	B zz(){
+		return b;
+	}
+}
+
+---------------------------------------------------
+---------------------------------------------------
+ASOCIACION
+________________>
+
+1)Rol 
+2)Especificador de acceso 
+3)Sentido
+4)Cardinalidad
+{
+- 0...1 o 1
+- 0...5 o 7
+- * o 0...*
+- 1...*
+}
+
+---------------------------------------------------
+---------------------------------------------------
+
+COLECCIONES
+
+1)ArrayList:
+- Coleccion dinamica
+- 0...*
+- import.java.util.ArrayList;
+- ArrayList<tipo> id = new ArrayList<tipo>();
+{
+- add(objeto-variable);
+- get(posicion);
+- size();
+}
+
+2)HashMap:
+- Coleccion dinamica con clave(Diccionario)
+- Clave - 0...*
+- import.java.util.HashMap;
+- HashMap<tipo clave, tipo valor> id = new HashMap<>();
+{
+- put(clave, valor);
+- get(clave);
+- revome(clave);
+- values();
+- keys();
+} 
