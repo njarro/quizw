@@ -1,0 +1,41 @@
+Gestion de excepciones
+
+try - catch- throw- throws - finally
+
+*RuntimeException - Errores
+*x/0 - Aritmetic exception
+*NullPointerException
+*ArrayIndexBoudExcepcion
+*IllegalArgumentException
+*IOException
+
+try{ //Zona de supervision
+	...
+}catch(tipoExcepcion  variable){ //Zona de procesamiento de errores
+	...
+}
+
+public class Division {
+    public Division(){
+	//Puede ir aqui *******
+	try{
+		this.dividir();
+	} catch (ArithmeticException e){
+		sout("Div por cero);
+	}
+        
+    }
+    
+    public void dividir() {
+	//O aqui *******
+	try{
+		int x = 5/0;
+	} catch (ArithmeticException e){
+		sout("Div por cero);
+	}
+    }
+}
+
+PERO SIEMPRE ES MEJOR QUE VAYA EN EL MAIN, PARA NO TENER QUE ANDAR BUSCANDO LOS ERRORES EN LOS METODOS
+
+- "finally" es un bloque donde se revierten los cambios luego de atrapar la excepcion
