@@ -15,7 +15,11 @@ public class Persona {
         this.sexo = sexo;
         this.rol = rol;
     }
-
+    
+    public String getInfoCompleta() {
+        return "Nombres: " + this.nombre + "\nApellidos: " + this.apellido +
+               "\nEdad: " + this.edad + "\nSexo: " + this.sexo + "\n\n";
+    }
     public String getNombre() {
         return nombre;
     }
