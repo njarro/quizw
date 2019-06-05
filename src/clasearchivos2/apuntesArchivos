@@ -1,0 +1,32 @@
+Archivos caracter-secuencial
+
+csv (comma separated values)
+
+Ej: Colombia;Pasto
+    Colombia;Millonarios 
+           (;) <- delimitador
+
+Scanner v = new Scanner(    );
+                        Flujo -> System.in
+                        Archivo -> File
+
+next() -> hasNext()
+nextInt() -> hasNextInt()
+nextDouble() -> hasNextDouble()
+
+Ej:
+2
+Colombia
+3
+Pasto
+Millonarios
+Nacional
+Inglesa
+1
+
+PrintStream salida = new PrintStream(  );
+                                     ^file
+
+salida.print(...);
+salida.println(...);
+salida.flush();
