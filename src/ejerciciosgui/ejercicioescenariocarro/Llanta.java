@@ -1,5 +1,5 @@
 
-package ejercicioescenario;
+package ejerciciosgui.ejercicioescenariocarro;
 
 public class Llanta extends Objeto{
 
@@ -10,5 +10,7 @@ public class Llanta extends Objeto{
     @Override
     public void mover() {
         setX(getX() + 1);
+        if (y + 30 < Piso.y)
+            setY(getY() + 1);
     }
 }

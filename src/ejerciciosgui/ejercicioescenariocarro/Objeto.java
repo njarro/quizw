@@ -1,5 +1,5 @@
 
-package ejercicioescenario;
+package ejerciciosgui.ejercicioescenariocarro;
 
 public abstract class Objeto {
     protected int x;

@@ -1,5 +1,5 @@
 
-package ejercicioescenario;
+package ejerciciosgui.ejercicioescenariocarro;
 
 import javafx.animation.AnimationTimer;
 import javafx.scene.canvas.GraphicsContext;
@@ -22,17 +22,22 @@ public class Animacion extends AnimationTimer{
         
         Chasis chasis = this.carro.getChasis();
         
-        double[] puntosX = {chasis.getX(), chasis.getX() + 30, chasis.getX() + 70, chasis.getX() + 100};
-        double[] puntosY = {chasis.getY() + 50, chasis.getY(), chasis.getY(), chasis.getY() + 50};
+        double[] puntosX = {chasis.getX(), chasis.getX() + 20, chasis.getX() + 60, chasis.getX() + 80};
+        double[] puntosY = {chasis.getY() + 30, chasis.getY(), chasis.getY(), chasis.getY() + 30};
         
         lapiz.setFill(Color.BLUE);
         lapiz.fillPolygon(puntosX, puntosY, 4);
         
         lapiz.setFill(Color.CYAN);
-        lapiz.fillRect(this.carro.getX(), this.carro.getY(), 100, 50);
+        lapiz.fillRect(this.carro.getX(), this.carro.getY(), 100, 30);
+        
         lapiz.setFill(Color.BLACK);
         lapiz.fillOval(this.carro.getLlantaTrasera().getX(), this.carro.getLlantaTrasera().getY(), 30, 30);
         lapiz.fillOval(this.carro.getLlantaDelantera().getX(), this.carro.getLlantaDelantera().getY(), 30, 30);
+        
+        lapiz.setFill(Color.GRAY);
+        lapiz.fillRect(Piso.x, Piso.y, Piso.ancho, Piso.alto);
+      
         
         this.carro.mover();
         

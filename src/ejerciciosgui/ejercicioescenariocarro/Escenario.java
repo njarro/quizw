@@ -1,5 +1,5 @@
 
-package ejercicioescenario;
+package ejerciciosgui.ejercicioescenariocarro;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -20,7 +20,7 @@ public class Escenario extends Application { //Application es una clase abstract
         
         Pane panel = new Pane();
         Canvas tablero = new Canvas(ancho, alto);  //Canvas recibe las dimensiones como parametros del constructor
-        panel.getChildren().add(tablero); //Cada Nodo tiene "hijos"
+        panel.getChildren().add(tablero); //Cada Nodo tiene "hijos". getChildren() devuelve la lista <> de hijos
         Scene escena = new Scene(panel, ancho, alto, Color.WHITE); //parametros del constructor de escena: Pane, dimx, dimy, color(opcional)
         GraphicsContext lapiz = tablero.getGraphicsContext2D();  //Un objeto canvas tiene un GraphicsContext, que se puede usar para crear un objeto para dibujar
         
