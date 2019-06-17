@@ -3,6 +3,7 @@ package ejerciciosgui.ejercicioescenariocarro;
 
 import javafx.animation.AnimationTimer;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 
 public class Animacion extends AnimationTimer{
@@ -41,6 +42,11 @@ public class Animacion extends AnimationTimer{
         
         this.carro.mover();
         
+        /*Image im = new Image("file:src//ejerciciosgui//ejercicioescenariocarro//down0.png");
+        lapiz.drawImage(im, 100, 100);
+        
+        Image im2 = new Image("file:src//ejerciciosgui//ejercicioescenariocarro//trinangm2.png");
+        lapiz.drawImage(im2, 200, 200); */
         /*lapiz.strokeText("Puntaje: ", 400, 50);
         
         lapiz.setStroke(Color.BLUE);

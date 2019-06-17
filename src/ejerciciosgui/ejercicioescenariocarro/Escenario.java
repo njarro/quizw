@@ -18,7 +18,7 @@ public class Escenario extends Application { //Application es una clase abstract
     public void start(Stage escenarioPrimario) throws Exception { // Metodo que se ejecuta al iniciar la aplicacion
         final int alto = 600, ancho = 600;
         
-        Pane panel = new Pane();
+        Pane panel = new Pane(); //Este es el layout
         Canvas tablero = new Canvas(ancho, alto);  //Canvas recibe las dimensiones como parametros del constructor
         panel.getChildren().add(tablero); //Cada Nodo tiene "hijos". getChildren() devuelve la lista <> de hijos
         Scene escena = new Scene(panel, ancho, alto, Color.WHITE); //parametros del constructor de escena: Pane, dimx, dimy, color(opcional)
